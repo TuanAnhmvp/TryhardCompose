@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.tuananhmvp.tryhardcompose"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.tuananhmvp.tryhardcompose"
@@ -63,4 +63,7 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+    debugImplementation ("androidx.compose.material:material-icons-extended:1.5.1")
+
 }

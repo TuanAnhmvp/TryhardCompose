@@ -40,17 +40,24 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
+import com.tuananhmvp.tryhardcompose.screen.SetupNavGraph
 import com.tuananhmvp.tryhardcompose.ui.theme.TryhardComposeTheme
 
 class MainActivity : ComponentActivity() {
+    lateinit var navController: NavHostController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             TryhardComposeTheme {
                 // A surface container using the 'background' color from the theme
                 //Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                MyApp(Modifier.fillMaxSize())
+                //MyApp(Modifier.fillMaxSize())
                 //}
+                navController = rememberNavController()
+                SetupNavGraph(navController = navController)
             }
         }
     }
